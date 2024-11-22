@@ -1,7 +1,10 @@
 ## RABBITSH
 
 >DISCLAIMER:
->This is not a PROD ready stuff... it was made by a random dev after few beers.
+>
+>This is not a PROD ready stuff... it was made by a random dev after few beers on a friday night.
+>
+>I may makes progress on this... don't know...
 
 This is a basic wrapper over 'named pipe' under unix with buffering and lock.
 So it may act like a rabbitMq FIFO queue.
@@ -27,7 +30,11 @@ $ docker run -u $(id -u):$(id -g) -v ./q:/q -ti sanix-darker/rabbitsh:latest /q/
 ```
 
 Now, you can send some messages to queues using the `send.sh` script.
+```bash
+$ ./send.sh ./q/q1 "tadan from user0"
+# ./send.sh <queue-path> <the-message>
+```
 
 ### AUTHOR
 
-- [dk](https://github.com/sanix-darker/rabbitsh)
+- [sanix-darker](https://github.com/sanix-darker/rabbitsh)
